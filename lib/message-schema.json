@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "recipient": {
+      "type": "object",
+      "required": ["type", "name"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["channel", "user"]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
